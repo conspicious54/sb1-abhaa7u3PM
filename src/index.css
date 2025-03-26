@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+::selection {
+  background: #4D7CFF;
+  color: white;
+}
+
+.hero-curve {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.hero-curve svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 46px;
+}
+
+.hero-curve .shape-fill {
+  fill: #FFFFFF;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(77, 124, 255, 0.1) 0%,
+    rgba(77, 124, 255, 0) 100%
+  );
+}
+
+.stats-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
