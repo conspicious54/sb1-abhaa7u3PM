@@ -14,6 +14,38 @@ export function Team() {
           </p>
         </div>
 
+        <div className="text-center mb-20">
+          <h3 className="text-[2.5rem] leading-tight mb-16 max-w-[90%] mx-auto">
+            <div className="flex items-center gap-2 justify-center">
+              <span className="font-bold">Our flexible team</span>
+              <div className="flex -space-x-4">
+                <img src="https://i.pravatar.cc/100?img=1" alt="Team Member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <img src="https://i.pravatar.cc/100?img=2" alt="Team Member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <img src="https://i.pravatar.cc/100?img=3" alt="Team Member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <img src="https://i.pravatar.cc/100?img=4" alt="Team Member" className="w-12 h-12 rounded-full border-2 border-white" />
+              </div>
+            </div>
+            <div className="font-bold mt-4">
+              has a wide range of skills, which lets us look at projects from a complete point of view that combines creativity <span className="text-4xl">🎨</span> and usefulness <span className="text-4xl">✨</span>.
+            </div>
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="p-8 rounded-2xl bg-white shadow-xl border border-gray-100">
+              <div className="text-5xl font-bold text-gray-900 mb-2">12<span className="text-[#4D7CFF]">+</span></div>
+              <div className="text-gray-600">Years Experience</div>
+            </div>
+            <div className="p-8 rounded-2xl bg-white shadow-xl border border-gray-100">
+              <div className="text-5xl font-bold text-gray-900 mb-2">14.3M<span className="text-[#4D7CFF]">+</span></div>
+              <div className="text-gray-600">Total Revenue</div>
+            </div>
+            <div className="p-8 rounded-2xl bg-white shadow-xl border border-gray-100">
+              <div className="text-5xl font-bold text-gray-900 mb-2">400<span className="text-[#4D7CFF]">+</span></div>
+              <div className="text-gray-600">Success Cases</div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Travis Marziani */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">

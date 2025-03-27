@@ -111,11 +111,13 @@ export function Hero() {
             <span className="font-medium">Trusted Amazon Partner</span>
           </div>
           
-          <img 
-            src="https://voyagela.com/wp-content/uploads/2022/12/c-TravisMarziani__PassionProductLive73048_1669274437235.jpg"
-            alt="Travis Marziani - Amazon Expert"
-            className="w-full h-[400px] object-cover rounded-2xl hover:shadow-xl transition-shadow duration-300"
-          />
+          <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <img 
+              src="https://voyagela.com/wp-content/uploads/2022/12/c-TravisMarziani__PassionProductLive73048_1669274437235.jpg"
+              alt="Travis Marziani - Amazon Expert"
+              className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-300"
+            />
+          </div>
 
           <div className="mt-6 bg-[#4D7CFF] text-white p-8 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 backdrop-blur-sm">
             <div className="text-4xl font-bold">$50M+</div>
