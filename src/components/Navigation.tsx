@@ -43,7 +43,11 @@ export function Navigation() {
       isScrolled ? 'shadow-lg' : 'border-b border-gray-100'
     }`}>
       <Link to="/" className="flex items-center gap-2">
-        <span className="text-black text-2xl font-bold tracking-tight">Primemate</span>
+        <img 
+          src="https://i.imgur.com/4cy2AXr.png" 
+          alt="Primemate Logo" 
+          className="h-8 w-auto"
+        />
       </Link>
       
       {/* Desktop Menu */}

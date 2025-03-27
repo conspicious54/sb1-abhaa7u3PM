@@ -1,12 +1,61 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 export function Hero() {
+  const vineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (vineRef.current) {
+        const scrolled = window.scrollY;
+        const rotation = Math.min(scrolled / 10, 15);
+        const translateX = Math.min(scrolled / 5, 50);
+        vineRef.current.style.transform = `rotate(${rotation}deg) translateX(${translateX}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div id="hero" className="relative px-6 md:px-12 pt-20 pb-32 grid md:grid-cols-2 gap-12 items-center bg-[#111111] overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full gradient-bg opacity-20"></div>
+      <div className="absolute inset-0 jungle-gradient"></div>
+      
+      <div ref={vineRef} className="absolute right-0 top-0 h-full w-[400px] overflow-visible" style={{ zIndex: 1 }}>
+        <svg 
+          viewBox="0 0 400 1000" 
+          className="w-full h-full" 
+          style={{ 
+            position: 'absolute',
+            right: '-200px',
+            top: '0'
+          }}
+        >
+          <path
+            d="M200,0 C300,200 100,400 200,600 S100,800 200,1000"
+            className="vine-path"
+            fill="none"
+            stroke="rgba(77, 124, 255, 0.15)"
+            strokeWidth="4"
+          />
+          {[0, 1, 2, 3, 4, 5].map((i) => (
+            <g key={i} transform={`translate(${190 + (i % 2) * 20}, ${i * 200})`}>
+              <path
+                d="M0,0 C10,-20 30,-20 40,0"
+                fill="rgba(77, 124, 255, 0.1)"
+              />
+              <path
+                d="M0,0 C10,20 30,20 40,0"
+                fill="rgba(77, 124, 255, 0.1)"
+              />
+            </g>
+          ))}
+        </svg>
+      </div>
+
       <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-white/80 mb-6 hover:bg-white/20 transition-colors cursor-pointer group">
+        <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-white/80 mb-6 hover:bg-white/20 transition-colors cursor-pointer group backdrop-blur-sm">
           <Zap className="w-4 h-4 group-hover:text-[#4D7CFF] transition-colors" />
           <span>Trusted by 100+ Amazon Sellers</span>
         </div>
@@ -29,11 +78,11 @@ export function Hero() {
             <input 
               type="email" 
               placeholder="Enter your email..." 
-              className="w-full bg-[#222222] text-white px-6 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-[#4D7CFF] transition-colors"
+              className="w-full bg-[#222222] text-white px-6 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-[#4D7CFF] transition-colors backdrop-blur-sm"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#4D7CFF]/0 via-[#4D7CFF]/5 to-[#4D7CFF]/0 rounded-xl pointer-events-none opacity-0 hover:opacity-100 transition-opacity"></div>
           </div>
-          <button className="group bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform hover:shadow-lg shadow-[#4D7CFF]/20 flex items-center gap-2">
+          <button className="group bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform hover:shadow-lg shadow-[#4D7CFF]/20 flex items-center gap-2 backdrop-blur-sm">
             Get A Free Audit
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -56,8 +105,8 @@ export function Hero() {
       </div>
 
       <div className="relative">
-        <div className="bg-white rounded-3xl p-8 relative shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
-          <div className="absolute -top-4 left-8 bg-[#4D7CFF] text-white px-6 py-2 rounded-full flex items-center gap-2 shadow-lg">
+        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 relative shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="absolute -top-4 left-8 bg-[#4D7CFF] text-white px-6 py-2 rounded-full flex items-center gap-2 shadow-lg backdrop-blur-sm">
             <Zap className="w-4 h-4" />
             <span className="font-medium">Trusted Amazon Partner</span>
           </div>
@@ -68,7 +117,7 @@ export function Hero() {
             className="w-full h-[400px] object-cover rounded-2xl hover:shadow-xl transition-shadow duration-300"
           />
 
-          <div className="mt-6 bg-[#4D7CFF] text-white p-8 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300">
+          <div className="mt-6 bg-[#4D7CFF] text-white p-8 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 backdrop-blur-sm">
             <div className="text-4xl font-bold">$50M+</div>
             <p className="mt-2 text-white/90 text-lg">Annual revenue managed</p>
             <div className="mt-6 flex -space-x-3">
