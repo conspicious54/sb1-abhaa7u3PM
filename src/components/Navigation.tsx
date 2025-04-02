@@ -31,11 +31,8 @@ export function Navigation() {
   };
 
   const handleAuditClick = () => {
-    navigate('/');
+    navigate('/free-audit');
     setIsMobileMenuOpen(false);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
   };
 
   return (
@@ -44,9 +41,9 @@ export function Navigation() {
     }`}>
       <Link to="/" className="flex items-center gap-2">
         <img 
-          src="https://i.imgur.com/4cy2AXr.png" 
+          src="https://i.imgur.com/agbo6tv.png" 
           alt="Primemate Logo" 
-          className="h-8 w-auto"
+          className="h-12 w-auto"
         />
       </Link>
       

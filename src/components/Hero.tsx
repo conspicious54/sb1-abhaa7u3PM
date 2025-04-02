@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export function Hero() {
   const vineRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +20,11 @@ export function Hero() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate(`/free-audit?email=${encodeURIComponent(email)}`);
+  };
 
   return (
     <div id="hero" className="relative px-6 md:px-12 pt-20 pb-32 grid md:grid-cols-2 gap-12 items-center bg-[#111111] overflow-hidden">
@@ -73,20 +81,26 @@ export function Hero() {
           We help brands scale on Amazon through data-driven optimization and proven growth strategies.
         </p>
         
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+        <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1">
             <input 
               type="email" 
               placeholder="Enter your email..." 
               className="w-full bg-[#222222] text-white px-6 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-[#4D7CFF] transition-colors backdrop-blur-sm"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#4D7CFF]/0 via-[#4D7CFF]/5 to-[#4D7CFF]/0 rounded-xl pointer-events-none opacity-0 hover:opacity-100 transition-opacity"></div>
           </div>
-          <button className="group bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform hover:shadow-lg shadow-[#4D7CFF]/20 flex items-center gap-2 backdrop-blur-sm">
+          <button 
+            type="submit"
+            className="group bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform hover:shadow-lg shadow-[#4D7CFF]/20 flex items-center gap-2 backdrop-blur-sm"
+          >
             Get A Free Audit
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
+        </form>
 
         <div className="mt-10 space-y-4">
           <div className="flex items-center gap-3 text-gray-300 group cursor-pointer">

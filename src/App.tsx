@@ -4,6 +4,7 @@ import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { ContactPage } from './pages/ContactPage';
+import { AuditPage } from './pages/AuditPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/free-audit" element={<AuditPage />} />
           </Routes>
         </div>
         <Footer />
