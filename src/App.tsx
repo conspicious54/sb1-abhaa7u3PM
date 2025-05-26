@@ -18,6 +18,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/free-audit" element={<AuditPage />} />
             <Route path="/yourapplication" element={<QualificationPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </div>
         <Footer />
@@ -26,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

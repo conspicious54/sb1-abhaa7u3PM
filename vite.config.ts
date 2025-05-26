@@ -7,6 +7,15 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    historyApiFallback: true,
+    port: 5173,
+    strictPort: true,
+    host: true,
+    open: true
   },
+  preview: {
+    port: 5173,
+    strictPort: true,
+    host: true,
+    open: true
+  }
 });
