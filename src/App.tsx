@@ -9,7 +9,7 @@ import { QualificationPage } from './pages/QualificationPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="min-h-screen bg-white flex flex-col">
         <Navigation />
         <div className="flex-grow">
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

@@ -6,7 +6,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/',
+  base: 'https://primemate.io/',
   server: {
     port: 5173,
     strictPort: true,
