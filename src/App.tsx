@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { ContactPage } from './pages/ContactPage';
 import { AuditPage } from './pages/AuditPage';
+import { QualificationPage } from './pages/QualificationPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/free-audit" element={<AuditPage />} />
+            <Route path="/yourapplication" element={<QualificationPage />} />
           </Routes>
         </div>
         <Footer />
