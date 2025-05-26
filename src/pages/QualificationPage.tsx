@@ -17,7 +17,7 @@ export function QualificationPage() {
           </div>
 
           <a 
-            href="https://calendly.com/your-link"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1pPf76SX82EFxq65ViEFVzOLzhWgGhCxVuhNAKEAWGbb3_lEF6Q1rfYLp0DvrBKMDBMpWgG8eG"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform group"
