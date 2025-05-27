@@ -7,9 +7,9 @@ import { ContactPage } from './pages/ContactPage';
 import { AuditPage } from './pages/AuditPage';
 import { QualificationPage } from './pages/QualificationPage';
 
-function App() {
+export default function App() {
   return (
-    <Router basename="/">
+    <Router>
       <div className="min-h-screen bg-white flex flex-col">
         <Navigation />
         <div className="flex-grow">
@@ -26,5 +26,3 @@ function App() {
     </Router>
   );
 }
-
-export default App
