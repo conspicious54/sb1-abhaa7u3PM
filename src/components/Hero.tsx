@@ -97,7 +97,7 @@ export function Hero() {
             type="submit"
             className="group bg-[#4D7CFF] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#3D6CFF] transition-all duration-300 hover:scale-105 transform hover:shadow-lg shadow-[#4D7CFF]/20 flex items-center gap-2 backdrop-blur-sm"
           >
-            Get A Free Audit
+            Get A Free Strategy Session
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </form>
@@ -127,7 +127,7 @@ export function Hero() {
           
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
             <img 
-              src="https://voyagela.com/wp-content/uploads/2022/12/c-TravisMarziani__PassionProductLive73048_1669274437235.jpg"
+              src="https://cdn.boldjourney.com/wp-content/uploads/2023/09/c-TravisMarziani__PassionProductLive73057_1694708767915.jpg"
               alt="Travis Marziani - Amazon Expert"
               className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-300"
             />

@@ -128,7 +128,7 @@ export function Testimonials() {
                   className="w-full bg-white/10 text-white px-6 py-4 rounded-xl border border-white/20 focus:outline-none focus:border-white/40 transition-colors placeholder-white/60"
                 />
                 <button className="w-full sm:w-auto group bg-white text-[#4D7CFF] px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 transform inline-flex items-center justify-center gap-2">
-                  Get A Free Audit
+                  Get A Free Strategy Session
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

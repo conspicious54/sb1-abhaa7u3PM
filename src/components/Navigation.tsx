@@ -30,7 +30,7 @@ export function Navigation() {
     }
   };
 
-  const handleAuditClick = () => {
+  const handleStrategyClick = () => {
     navigate('/free-audit');
     setIsMobileMenuOpen(false);
   };
@@ -64,10 +64,10 @@ export function Navigation() {
       </button>
 
       <button 
-        onClick={handleAuditClick}
+        onClick={handleStrategyClick}
         className="hidden md:flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform hover:shadow-lg group"
       >
-        Get A Free Audit
+        Get A Free Strategy Session
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </button>
 
@@ -80,10 +80,10 @@ export function Navigation() {
             <button onClick={() => scrollToSection('testimonials')} className="text-left text-gray-600 hover:text-black transition-colors py-2">Results</button>
             <Link to="/contact" className="text-gray-600 hover:text-black transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
             <button 
-              onClick={handleAuditClick}
+              onClick={handleStrategyClick}
               className="bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors w-full flex items-center justify-center gap-2"
             >
-              Get A Free Audit
+              Get A Free Strategy Session
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
