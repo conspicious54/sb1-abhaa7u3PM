@@ -11,7 +11,8 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     host: true,
-    open: true
+    open: true,
+    historyApiFallback: true
   },
   preview: {
     port: 5173,
