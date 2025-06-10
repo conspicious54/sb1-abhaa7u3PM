@@ -58,7 +58,7 @@ export function AuditPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Get Your Free Amazon Audit
+              Get Your Free Strategy Session
             </h1>
             <p className="text-gray-600 text-lg">
               Complete the form below to receive your comprehensive Amazon store analysis
