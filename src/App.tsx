@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage';
 import { ContactPage } from './pages/ContactPage';
 import { AuditPage } from './pages/AuditPage';
 import { QualificationPage } from './pages/QualificationPage';
+import { ThankYouPage } from './pages/ThankYouPage';
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/free-audit" element={<AuditPage />} />
             <Route path="/yourapplication" element={<QualificationPage />} />
-            <Route path="*" element={<Navigate to="/\" replace />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
         <Footer />
